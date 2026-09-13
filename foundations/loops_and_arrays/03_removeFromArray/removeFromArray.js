@@ -1,9 +1,10 @@
-const removeFromArray = function(arr, removedElement) {
-    const newArr = arr.filter((number) => 
-        for (var i = 1; i < arguments.length; i++){
-            number !== arguments[i]
+const removeFromArray = function(arr, ...elements) {
+    const newArr = [];
+    for (var element of arr) {
+        if (!elements.includes(element)) {
+            newArr.push(element);
         }
-    );
+    }
     return newArr;
 };
 
